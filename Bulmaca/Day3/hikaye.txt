@@ -1,0 +1,89 @@
+3.Gün Sırt Çantasının Yeniden Düzenlenmesi
+
+Bir elf, tüm sırt çantalarını orman yolculuğu için gerekli malzemelerle doldurmak gibi önemli bir işe sahiptir.
+
+Ne yazık ki,o elf paketleme talimatlarına tam olarak uymadı ve bu nedenle birkaç öğrenin şimdi yeniden düzenlenmesi gerekiyor.
+
+Her sırt çantasının 2 büyük bölmesi vardır.Belirli bir türdeki tüm öğeler, iki bölmeden tam olarak birine girecek şekilde tasarlanmıştır.
+
+Paketlemeyi yapan elf sırt çantası başına  tam olarak bir öğe türü için bu kuralı izleyemedi.
+
+Elfler, şu anda her sırt çantasında bulunan tüm öğelerin bir listesini yaptı.(Bulmaca verileri) ancak hataları bulmak için yardımıma ihtiyaçları var.
+
+Her öğre türü, tek bir küçük veya büyük harfle tanımlanır. (Yani a ve A farklı öğe türlerini ifade eder.)
+
+Her sırt çantası için eşya listesi tek bir satırda karakter olarak verilmiştir.
+
+Belirli bir sırt çantasının iki bölmesinde her zaman AYNI SAYIDA öğe vardır, bu nedenle karakterlerin ilk yarısı 1.bölmedeki öğeleri,
+karakterlerin ikinci yarısı ise ikinci bölmedeki öğeleri temsil eder.
+
+ÖRNEK: Örneğin 6 sırt çantasından aşağıdaki gibi içerik listesine sahip olduğunuzu varsayalım:
+vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw
+
+İlk sırt çantası vJrwpWtwJgWrhcsFMMfFFhFp öğelerini içerir; bu, birinci bölmesinin vJrwpWtwJgWr öğelerini içerdiği, 
+ikinci bölmenin ise hcsFMMfFFhFp öğelerini içerdiği anlamına gelir.
+
+Her iki bölmede de görülen tek öğe türü küçük harf "p" 'dir.
+
+İkinci sırt çantasının bölmeleri jqHRNqRjqzjGDLGL ve rsFMfFZSrLrFZsSL içerir. Her iki bölmede de görünen tek öğe türü büyük L harfidir.
+
+Üçüncü sırt çantasının bölmeleri PmmdzqPrV ve vPwwTWBwg içerir; tek yaygın öğe türü büyük P'dir.
+
+Dördüncü sırt çantasının bölmeleri yalnızca öğe türü v'yi paylaşır.
+
+Beşinci sırt çantasının bölmeleri yalnızca öğe türü t'yi paylaşır.
+
+Altıncı sırt çantasının bölmeleri yalnızca öğe türü s'yi paylaşır.
+
+Öğe yeniden düzenlemesine öncelik verilmesine yardımcı olmak için her öğe türü bir önceliğe dönüştürülebilir:
+
+a'dan z'ye küçük harfli öğe türlerinin öncelikleri 1'den 26'ya kadardır.
+
+A'dan Z'ye büyük harfli öğe türlerinin öncelikleri 27'den 52'ye kadardır.
+
+Yukarıdaki örnekte, her bir sırt çantasının her iki bölmesinde de görünen eşya türünün önceliği 
+16 (p),
+38 (L),
+42 (P),
+22 (v),
+20 (t) ve 19 (s)'dir. ;
+bunların toplamı 157'dir.
+
+Her sırt çantasının her iki bölmesinde de görünen öğe türünü bulun. Bu öğe türlerinin önceliklerinin toplamı nedir?
+
+
+Part2 #############################################################################################################
+
+--- Bölüm iki ---
+
+Siz kaybolan eşyaları tanımlamayı bitirirken, Elfler size başka bir sayı ile gelir.
+
+Güvenlik için Elfler üçlü gruplara ayrılır. Her Elf, grubunu tanımlayan bir rozet taşır. Verimlilik için, üç Elften oluşan her grup içinde rozet, üç Elf tarafından taşınan tek öğe türüdür. Yani, bir grubun rozeti eşya tipi B ise, o zaman üç Elfin de sırt çantalarının bir yerinde eşya tipi B olacaktır ve Elflerden en fazla ikisi başka herhangi bir eşya tipini taşıyacaktır.
+
+Sorun şu ki, birisi bu yılki güncellenmiş orijinallik etiketini rozetlere yapıştırmayı unutmuş. Yeni özgünlük çıkartmalarının yapıştırılabilmesi için tüm rozetlerin sırt çantalarından çıkarılması gerekiyor.
+
+Ek olarak, hiç kimse hangi öğe türünün her grubun rozetlerine karşılık geldiğini yazmadı. Hangi öğe türünün doğru olduğunu söylemenin tek yolu, her gruptaki üç Elf arasında ortak olan bir öğe türünü bulmaktır.
+
+Listenizdeki her üç satır grubu tek bir gruba karşılık gelir, ancak her grubun farklı bir rozet öğesi türü olabilir. Yani, yukarıdaki örnekte, ilk grubun sırt çantaları ilk üç satırdır:
+
+vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+
+Ve ikinci grubun sırt çantaları sonraki üç satırdır:
+
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw
+
+Birinci grupta, üç sırt çantasında da görünen tek öğe türü küçük r harfidir; bu onların rozetleri olmalı. İkinci grupta, rozet öğe türü Z olmalıdır.
+
+Çıkartma takma çabalarını düzenlemek için bu öğelerin öncelikleri yine de bulunmalıdır: burada, birinci grup için 18 (r) ve ikinci grup için 52 (Z). Bunların toplamı 70'tir.
+
+Her üç Elf grubunun rozetlerine karşılık gelen öğe türünü bulun. Bu öğe türlerinin önceliklerinin toplamı nedir?
+

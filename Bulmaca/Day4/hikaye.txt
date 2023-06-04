@@ -1,0 +1,63 @@
+--- 4. Gün: Kamp Temizliği ---
+
+Gemilerden son erzak boşaltılmadan önce alanın boşaltılması gerekiyor ve bu nedenle, kampın bazı bölümlerini temizleme görevi birkaç Elf'e verildi. Her bölümün benzersiz bir kimlik numarası vardır ve her Elf'e bir dizi bölüm kimliği atanır.
+
+Bununla birlikte, bazı Elfler bölüm atamalarını birbirleriyle karşılaştırırken, birçok atamanın örtüştüğünü fark ettiler. Çakışmaları hızlı bir şekilde bulmaya çalışmak ve yinelenen çabayı azaltmak için, Elfler eşleşir ve her bir çift için bölüm atamalarının büyük bir listesini yapar (bulmaca girdiniz).
+
+Örneğin, aşağıdaki bölüm atama çiftleri listesini göz önünde bulundurun:
+
+2-4,6-8
+2-3,4-5
+5-7,7-9
+2-8,3-7
+6-6,4-6
+2-6,4-8
+
+İlk birkaç çift için bu liste şu anlama gelir:
+
+    İlk Elf çifti içinde, ilk Elf'e 2-4. Bölümler (2., 3. ve 4. Bölümler), ikinci Elf'e 6-8. Bölümler (6., 7., 8. Bölümler) atanmıştır.
+    İkinci çiftteki Elflerin her birine iki bölüm atandı.
+    Üçüncü çiftteki Elflerin her birine üç bölüm atandı: biri 5, 6 ve 7. bölümleri alırken diğeri de 7, artı 8 ve 9'u aldı.
+
+Bu örnek liste, çizimi kolaylaştırmak için tek haneli bölüm kimliklerini kullanır; gerçek listeniz daha büyük sayılar içerebilir. Görsel olarak, bu bölüm atama çiftleri şöyle görünür:
+
+.234..... 2-4
+.....678. 6-8
+
+.23...... 2-3
+...45.... 4-5
+
+....567.. 5-7
+......789 7-9
+
+.2345678. 2-8
+..34567.. 3-7
+
+......6... 6-6
+...456... 4-6
+
+.23456...2-6
+...45678. 4-8
+
+Çiftlerden bazıları, ödevlerinden birinin diğerini tamamen içerdiğini fark etti. Örneğin, 2-8, 3-7'yi tamamen içerir ve 6-6, 4-6'yı tamamen içerir. Bir ödevin diğerini tamamen içerdiği çiftlerde, çiftteki bir Elf, eşinin zaten temizliyor olacağı bölümleri özel olarak temizliyor olacaktı, bu yüzden bunlar yeniden değerlendirilmeye en çok ihtiyaç duyanlar gibi görünüyor. Bu örnekte, böyle 2 çift vardır.
+
+Kaç atama çiftinde bir aralık diğerini tamamen içerir?
+
+
+
+part2
+
+--- Bölüm iki ---
+
+Hâlâ planlanmış bir miktar yinelenen çalışma var gibi görünüyor. Bunun yerine, Elfler örtüşen çiftlerin sayısını bilmek ister.
+
+Yukarıdaki örnekte ilk iki çift (2-4,6-8 ve 2-3,4-5) üst üste binmezken, kalan dört çift (5-7,7-9, 2-8,3) -7, 6-6,4-6 ve 2-6,4-8) çakışıyor:
+
+    5-7,7-9 tek bir bölümde örtüşüyor, 7.
+    2-8,3-7, 3'ten 7'ye kadar tüm bölümlerle örtüşüyor.
+    6-6,4-6 tek bir bölümde örtüşüyor, 6.
+    2-6,4-8, 4, 5 ve 6. bölümlerde çakışıyor.
+
+Dolayısıyla, bu örnekte, örtüşen atama çiftlerinin sayısı 4'tür.
+
+Aralıklar kaç atama çiftinde çakışıyor?

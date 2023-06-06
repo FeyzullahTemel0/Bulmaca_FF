@@ -9,8 +9,8 @@ def find_start_of_packet(ff):
             return i + 1
     return -1
 
-datastream_file = "veriler.txt"
-result = find_start_of_packet(datastream_file)
+ff_file = "veriler.txt"
+result = find_start_of_packet(ff_file)
 print("İlk paket başlangıcı", result, ". karakterde bulunuyor.")
 
 

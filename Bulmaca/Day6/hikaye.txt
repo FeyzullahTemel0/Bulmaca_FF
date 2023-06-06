@@ -1,0 +1,49 @@
+--- 6. Gün: Akort Sorunu ---
+
+Hazırlıklar nihayet tamamlandı; siz ve Elfler kamptan yürüyerek ayrılın ve yıldız meyve bahçesine doğru yol almaya başlayın.
+
+Yoğun çalılıkların arasında ilerlerken, Elflerden biri size elde taşınan bir cihaz verir. Pek çok süslü özelliği olduğunu ama şu anda kurulması gereken en önemli özelliğin iletişim sistemi olduğunu söylüyor.
+
+Ancak, sinyal tabanlı sistemler konusunda önemli bir deneyiminiz olduğunu duyduğu için, diğer Elfleri arızalı cihazlarını size vermenin sorun olmayacağına ikna etti - kesinlikle tamir etmekte sorun yaşamazsınız.
+
+Cihaz, komedi zamanlamasından ilham almış gibi birkaç renkli kıvılcım yayar.
+
+Elflerle iletişim kurabilmek için cihazın onların sinyaline kilitlenmesi gerekir. Sinyal, cihazın birer birer aldığı, görünüşte rasgele bir karakter dizisidir.
+
+İletişim sistemini düzeltmek için, veri akışında bir paket başlangıcı işaretleyicisi algılayan cihaza bir alt program eklemeniz gerekir. Elfler tarafından kullanılan protokolde, bir paketin başlangıcı, hepsi farklı olan dört karakterlik bir dizi ile gösterilir.
+
+Cihaz, alt programınıza bir veri akışı tamponu (yapboz girişiniz) gönderecektir; alt programınızın en son alınan dört karakterin hepsinin farklı olduğu ilk konumu belirlemesi gerekir. Spesifik olarak, arabelleğin başından bu tür ilk dört karakterlik işaretçinin sonuna kadar karakter sayısını bildirmesi gerekir.
+
+Örneğin, aşağıdaki veri akışı arabelleğini aldığınızı varsayalım:
+
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
+
+İlk üç karakter (mjq) alındıktan sonra, işaretçiyi bulmak için henüz yeterli karakter alınmadı. İlk kez bir işaretçi dördüncü karakter alındıktan sonra meydana gelebilir ve bu da en son dört karakteri mjqj yapar. j tekrarlandığı için bu bir belirteç değildir.
+
+Bir işaretleyici ilk kez göründüğünde, yedinci karakter geldikten sonradır. Bunu yaptıktan sonra, alınan son dört karakter jpqm'dir ve hepsi farklıdır. Bu durumda, alt programınız 7 değerini bildirmelidir, çünkü ilk paket başlangıç ​​işaretçisi 7 karakter işlendikten sonra tamamlanır.
+
+İşte birkaç örnek daha:
+
+    bvwbjplbgvbhsrlpgdmjqwftvncz: 5. karakterden sonraki ilk işaretçi
+    nppdvjthqldpwncqszvftbrmjlhg: 6. karakterden sonraki ilk işaretçi
+    nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg: 10. karakterden sonraki ilk işaretçi
+    zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw: 11. karakterden sonraki ilk işaretçi
+
+İlk paket başlangıcı işaretçisi algılanmadan önce kaç karakterin işlenmesi gerekiyor?
+
+--- Bölüm iki ---
+
+Cihazınızın iletişim sistemi paketleri doğru bir şekilde algılıyor, ancak hala çalışmıyor. Mesajları da araması gerekiyor gibi görünüyor.
+
+Mesajın başlangıcı işaretçisi, 4 yerine 14 farklı karakterden oluşması dışında, tıpkı bir paket başlangıcı işaretçisi gibidir.
+
+Yukarıdaki tüm örnekler için mesaj başlangıcı işaretçilerinin ilk konumları şunlardır:
+
+    mjqjpqmgbljsphdztnvjfqwrcgsmlb: 19. karakterden sonraki ilk işaretçi
+    bvwbjplbgvbhsrlpgdmjqwftvncz: 23. karakterden sonraki ilk işaretçi
+    nppdvjthqldpwncqszvftbrmjlhg: 23. karakterden sonraki ilk işaretçi
+    nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg: 29. karakterden sonraki ilk işaretçi
+    zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw: 26. karakterden sonraki ilk işaretçi
+
+İlk mesaj başlangıcı işaretçisi algılanmadan önce kaç karakterin işlenmesi gerekiyor?
+
